@@ -1,5 +1,7 @@
 {
   "name": "lean_Ajax",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }
