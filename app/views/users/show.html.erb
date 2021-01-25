@@ -1,5 +1,7 @@
 <h1><%= @user.name %>のページ</h1>
 <p>メールアドレス：<%= @user.email %></p>
+<%= link_to "Go Blog", blogs_path %>
+<br>
 <%= link_to "Edit profile", edit_user_path(@user.id) %>
 <br>
 <%= link_to "Delete account", user_path(@user.id),method: :delete, data: { confirm: "Are you sure to delete your accounr?" } %>
