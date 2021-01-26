@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= @blog.user.name %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @blog.title %>
 </p>
@@ -9,6 +14,12 @@
   <strong>Content:</strong>
   <%= @blog.content %>
 </p>
+
+<div id="comments_area">
+<%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog } %>
+</div>
+
+<%= render partial: 'comments/form', locals: { comment: @comment, blog: @blog } %>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
